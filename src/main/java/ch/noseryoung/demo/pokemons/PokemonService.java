@@ -14,13 +14,13 @@ public class PokemonService {
 		ArrayList<Typing> weakAgainst = new ArrayList<>();
 		ArrayList<Typing> strongAgainst = new ArrayList<>();
 		ArrayList<Typing> immuneAgainst = new ArrayList<>();
-		Typing typing = new Typing("Fighting", resistantAgainst, weakAgainst, strongAgainst, immuneAgainst);
+		Typing typing = new Typing(1L, "Fighting", resistantAgainst, weakAgainst, strongAgainst, immuneAgainst);
 		ArrayList<Typing> typings = new ArrayList<>();
 		typings.add(typing);
 		
-		Ability innerFocus = new Ability("Inner focus", "This pokemon cannot flinch.");
-		Ability regenerator = new Ability("Regenerator", "Heals a bit when switched out.");
-		Ability reckless = new Ability("Reckless", "Moves that have recoil or crash damage deal more damage.");
+		Ability innerFocus = new Ability(1L, "Inner focus", "This pokemon cannot flinch.");
+		Ability regenerator = new Ability(2L, "Regenerator", "Heals a bit when switched out.");
+		Ability reckless = new Ability(3L, "Reckless", "Moves that have recoil or crash damage deal more damage.");
 		ArrayList<Ability> abilities = new ArrayList<>();
 		abilities.add(innerFocus);
 		abilities.add(regenerator);
@@ -46,13 +46,13 @@ public class PokemonService {
 		ArrayList<Typing> weakAgainst = new ArrayList<>();
 		ArrayList<Typing> strongAgainst = new ArrayList<>();
 		ArrayList<Typing> immuneAgainst = new ArrayList<>();
-		Typing typing = new Typing("Fighting", resistantAgainst, weakAgainst, strongAgainst, immuneAgainst);
+		Typing typing = new Typing(1L, "Fighting", resistantAgainst, weakAgainst, strongAgainst, immuneAgainst);
 		ArrayList<Typing> typings = new ArrayList<>();
 		typings.add(typing);
 		
-		Ability innerFocus = new Ability("Inner focus", "This pokemon cannot flinch.");
-		Ability regenerator = new Ability("Regenerator", "Heals a bit when switched out.");
-		Ability reckless = new Ability("Reckless", "Moves that have recoil or crash damage deal more damage.");
+		Ability innerFocus = new Ability(1L, "Inner focus", "This pokemon cannot flinch.");
+		Ability regenerator = new Ability(2L, "Regenerator", "Heals a bit when switched out.");
+		Ability reckless = new Ability(3L, "Reckless", "Moves that have recoil or crash damage deal more damage.");
 		ArrayList<Ability> abilities = new ArrayList<>();
 		abilities.add(innerFocus);
 		abilities.add(regenerator);
@@ -60,7 +60,7 @@ public class PokemonService {
 		
 		
 		Pokemon mienshao = new Pokemon();
-		mienshao.setId(Long.parseLong("620"));
+		mienshao.setId(620L);
 		mienshao.setName("Mienshao");
 		mienshao.setHealth(65);
 		mienshao.setAttack(125);
@@ -72,7 +72,7 @@ public class PokemonService {
 		mienshao.setType(typings);
 		
 		Pokemon mienfoo = new Pokemon();
-		mienfoo.setId(Long.parseLong("619"));
+		mienfoo.setId(619L);
 		mienfoo.setName("Mienfoo");
 		mienfoo.setHealth(45);
 		mienfoo.setAttack(85);
