@@ -17,10 +17,21 @@ import org.springframework.web.bind.annotation.RestController;
 import ch.noseryoung.demo.abilities.Ability;
 import ch.noseryoung.demo.typings.Typing;
 
+/** This class is the controller of pokemons.
+ * 
+ * 
+ * @author haru
+ */
+
 @RestController
 @RequestMapping("/pokemon")
 public class PokemonController {
 	
+	/** This method returns a specific pokemon
+	 * 
+	 * @param id
+	 * @return ResposneEntity returns the requested pokemon
+	 */
 	@GetMapping("/{id}")
 	public @ResponseBody ResponseEntity<Pokemon> getPokemon(@PathVariable Long id) {
 		ArrayList<Typing> resistantAgainst = new ArrayList<>();		
@@ -52,6 +63,10 @@ public class PokemonController {
 		return new ResponseEntity<Pokemon>(pokemon, HttpStatus.OK);
 	}
 	
+	/** This method returns all pokemons
+	 * 
+	 * @return ResponseEntity returns all pokemons
+	 */
 	@GetMapping({"", "/"})
 	public @ResponseBody ResponseEntity<ArrayList<Pokemon>> getAllPokemon() {
 		ArrayList<Typing> resistantAgainst = new ArrayList<>();
@@ -100,16 +115,31 @@ public class PokemonController {
 		return new ResponseEntity<ArrayList<Pokemon>>(pokemons, HttpStatus.OK);
 	}
 	
+	/** This method creates a pokemon
+	 * 
+	 * @param pokemon
+	 * @return ResponseEntity returns a confirmation that the pokemon has been created
+	 */
 	@PostMapping({"/", ""})
 	public @ResponseBody ResponseEntity<String> createPokemon(@RequestBody Pokemon pokemon) {
 		return new ResponseEntity<String>(pokemon.getName() + " has been created ^^", HttpStatus.CREATED);
 	}
 	
+	/** This method updates a specific pokemon
+	 * 
+	 * @param pokemon
+	 * @return ResponseEntity returns a confirmation that the pokemon has been updated
+	 */
 	@PutMapping({"/", ""})
 	public @ResponseBody ResponseEntity<String> updatePokemon(@RequestBody Pokemon pokemon) {
 		return new ResponseEntity<String>(pokemon.getName() + " has been updated", HttpStatus.OK);
 	}
 	
+	/** This method deletes a specific pokemon
+	 * 
+	 * @param id
+	 * @return ResponseEntity returns a confirmation that the pokemon has been deleted
+	 */
 	@DeleteMapping("/{id}")
 	public @ResponseBody ResponseEntity<String> deletePokemon(@PathVariable Long id) {
 		return new ResponseEntity<String>("The pokemon with the ID: " + id +" has been deleted", HttpStatus.NO_CONTENT);
