@@ -7,10 +7,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class}) 
 @ComponentScan()
-public class DemoApplication {
+public class Main {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(Main.class, args);
 		System.out.println("Help");
 	}
 }

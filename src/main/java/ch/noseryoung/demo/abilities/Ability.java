@@ -1,4 +1,4 @@
-package ch.noseryoung.demo;
+package ch.noseryoung.demo.abilities;
 
 public class Ability {
 	private String name;

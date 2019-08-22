@@ -1,4 +1,4 @@
-package ch.noseryoung.demo;
+package ch.noseryoung.demo.pokemons;
 
 import java.util.ArrayList;
 
@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import ch.noseryoung.demo.abilities.Ability;
+import ch.noseryoung.demo.typings.Typing;
 
 @RestController
 @RequestMapping("/pokemon")

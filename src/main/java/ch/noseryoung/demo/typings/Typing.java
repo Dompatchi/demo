@@ -1,4 +1,4 @@
-package ch.noseryoung.demo;
+package ch.noseryoung.demo.typings;
 
 import java.util.ArrayList;
 

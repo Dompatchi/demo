@@ -1,6 +1,9 @@
-package ch.noseryoung.demo;
+package ch.noseryoung.demo.pokemons;
 
 import java.util.ArrayList;
+
+import ch.noseryoung.demo.abilities.Ability;
+import ch.noseryoung.demo.typings.Typing;
 
 public class Pokemon {
 	private Long id;
