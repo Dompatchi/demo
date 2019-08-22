@@ -1,6 +1,7 @@
 package ch.noseryoung.demo.abilities;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,7 +41,7 @@ public class AbilityController {
 	 */
 	@GetMapping("/{id}")
 	public @ResponseBody ResponseEntity<Ability> getAbility(@PathVariable Long id) {
-		Ability ability = abilityService.getAbility(id);
+		Ability ability = abilityService.getAbility(id).get();
 		return new ResponseEntity<Ability>(ability, HttpStatus.OK);
 	}
 	
@@ -49,9 +50,9 @@ public class AbilityController {
 	 * @return ResponseEntity returns all abilities
 	 */
 	@GetMapping({"", "/"})
-	public @ResponseBody ResponseEntity<ArrayList<Ability>> getAllAbility() {
-		ArrayList<Ability> abilities = abilityService.getAllAbilities();
-		return new ResponseEntity<ArrayList<Ability>>(abilities, HttpStatus.OK);
+	public @ResponseBody ResponseEntity<List<Ability>> getAllAbility() {
+		List<Ability> abilities = abilityService.getAllAbilities();
+		return new ResponseEntity<List<Ability>>(abilities, HttpStatus.OK);
 	}
 	
 	/** This method creates a ability
