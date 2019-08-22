@@ -13,7 +13,8 @@ public class PokemonService {
 		ArrayList<Typing> resistantAgainst = new ArrayList<>();		
 		ArrayList<Typing> weakAgainst = new ArrayList<>();
 		ArrayList<Typing> strongAgainst = new ArrayList<>();
-		Typing typing = new Typing("Fighting", resistantAgainst, weakAgainst, strongAgainst);
+		ArrayList<Typing> immuneAgainst = new ArrayList<>();
+		Typing typing = new Typing("Fighting", resistantAgainst, weakAgainst, strongAgainst, immuneAgainst);
 		ArrayList<Typing> typings = new ArrayList<>();
 		typings.add(typing);
 		
@@ -27,6 +28,7 @@ public class PokemonService {
 				
 		Pokemon pokemon = new Pokemon();
 		pokemon.setId(id);
+		pokemon.setName("Mienshao");
 		pokemon.setHealth(65);
 		pokemon.setAttack(125);
 		pokemon.setDefense(60);
@@ -43,7 +45,8 @@ public class PokemonService {
 		ArrayList<Typing> resistantAgainst = new ArrayList<>();
 		ArrayList<Typing> weakAgainst = new ArrayList<>();
 		ArrayList<Typing> strongAgainst = new ArrayList<>();
-		Typing typing = new Typing("Fighting", resistantAgainst, weakAgainst, strongAgainst);
+		ArrayList<Typing> immuneAgainst = new ArrayList<>();
+		Typing typing = new Typing("Fighting", resistantAgainst, weakAgainst, strongAgainst, immuneAgainst);
 		ArrayList<Typing> typings = new ArrayList<>();
 		typings.add(typing);
 		
@@ -58,6 +61,7 @@ public class PokemonService {
 		
 		Pokemon mienshao = new Pokemon();
 		mienshao.setId(Long.parseLong("620"));
+		mienshao.setName("Mienshao");
 		mienshao.setHealth(65);
 		mienshao.setAttack(125);
 		mienshao.setDefense(60);
@@ -69,6 +73,7 @@ public class PokemonService {
 		
 		Pokemon mienfoo = new Pokemon();
 		mienfoo.setId(Long.parseLong("619"));
+		mienfoo.setName("Mienfoo");
 		mienfoo.setHealth(45);
 		mienfoo.setAttack(85);
 		mienfoo.setDefense(50);
