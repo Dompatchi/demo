@@ -2,6 +2,7 @@ package ch.noseryoung.demo.typings;
 
 import java.util.ArrayList;
 
+
 public class Typing {
 	private Long id;
 	private String name;
