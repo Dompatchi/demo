@@ -3,6 +3,7 @@ package ch.noseryoung.demo.persons;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,26 +28,31 @@ public class PersonController {
 	
 	@GetMapping("/{id}")
 	public @ResponseBody ResponseEntity<Person> getPerson(@PathVariable Long id) {
-		return null;
+		Person person = personService.getPerson(id).get();
+		return new ResponseEntity<Person>(person, HttpStatus.OK);
 	}
 	
 	@GetMapping({"", "/"})
 	public @ResponseBody ResponseEntity<List<Person>> getAllPersons() {
-		return null;
+		List<Person> list = personService.getAllPersons();
+		return new ResponseEntity<List<Person>>(list, HttpStatus.OK);
 	}
 	
 	@PostMapping({"", "/"})
 	public @ResponseBody ResponseEntity<String> createPerson(@RequestBody Person person) {
-		return null;
+		personService.createPerson(person);
+		return new ResponseEntity<String>("Person created", HttpStatus.CREATED);
 	}
 	
 	@PutMapping({"", "/"})
 	public @ResponseBody ResponseEntity<String> updatePerson(@RequestBody Person person) {
-		return null;
+		personService.updatePerson(person);
+		return new ResponseEntity<String>("Person updated", HttpStatus.CREATED);
 	}
 	
 	@DeleteMapping("/{id}")
 	public @ResponseBody ResponseEntity<String> deletePerson(@PathVariable Long id) {
-		return null;
+		personService.deletePerson(id);
+		return new ResponseEntity<String>("Person deleted", HttpStatus.CREATED);
 	}
 }

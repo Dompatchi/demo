@@ -16,6 +16,10 @@ public class Person {
 	@Column(name = "name")
 	private String name;
 
+	public Person() {
+		super();
+	}
+
 	public Person(Long id, String name) {
 		super();
 		this.id = id;
@@ -37,6 +41,4 @@ public class Person {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
 }

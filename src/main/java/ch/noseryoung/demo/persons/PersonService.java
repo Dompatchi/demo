@@ -20,7 +20,7 @@ public class PersonService {
 		return personRepository.findById(id);
 	}
 
-	public List<Person> getAllAbilities() {
+	public List<Person> getAllPersons() {
 		return personRepository.findAll();
 	}
 
