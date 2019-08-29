@@ -36,6 +36,7 @@ public class EmailService implements MessageService{
 		MimeMessage message = javaMailSender.createMimeMessage();
 	      
 	    MimeMessageHelper helper;
+	    
 		try {
 			helper = new MimeMessageHelper(message, true);
 		    helper.setTo(email.getTo());
@@ -50,6 +51,7 @@ public class EmailService implements MessageService{
 		} catch (MessagingException e) {
 			e.printStackTrace();
 		}
+		
 	    javaMailSender.send(message);
 	}
 }
