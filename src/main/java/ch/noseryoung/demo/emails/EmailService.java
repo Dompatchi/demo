@@ -44,8 +44,7 @@ public class EmailService implements MessageService{
 		    helper.setText(email.getText());
 		    
 		    for(String path : email.getAttachments()) {
-		    	FileSystemResource file 
-			      = new FileSystemResource(new File(path));
+		    	FileSystemResource file = new FileSystemResource(new File(path));
 			    helper.addAttachment(file.getFilename(), file);
 		    }
 		} catch (MessagingException e) {
