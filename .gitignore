@@ -33,4 +33,4 @@ out/
 
 *.class
 *.properties
-bin/
+bin
