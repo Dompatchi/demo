@@ -1,18 +1,15 @@
 language: java
-jdk:
-  - openjdk11
-
 sudo: false
+install: true
 
 addons:
   sonarcloud:
     organisation: "dompatchi"
     token:
-      secure: ""
+      secure: "f1bb3d6d3075b91ec4f6294960f80c06c5508b57"
 
-before_install:
- - chmod +x gradlew
+ jdk:
+  - openjdk11
 
 script:
-  - ./gradlew clean build -i --continue
   - ./gradlew sonarqube
