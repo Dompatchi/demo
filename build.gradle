@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.2.0.M5'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
+	id "org.sonarqube" version "2.7.1"
 }
 
 group = 'ch.noseryoung'
@@ -31,10 +32,6 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testImplementation 'org.springframework.security:spring-security-test'
-}
-
-plugins {
-  id "org.sonarqube" version "2.7.1"
 }
 
 test {
