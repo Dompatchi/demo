@@ -33,6 +33,19 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 }
 
+plugins {
+  id "org.sonarqube" version "2.7.1"
+}
+
 test {
 	useJUnitPlatform()
+}
+
+task startBootRun {
+	println("Task started!")
+	doLast {
+		println("Task finished!")
+	}
+	
+	finalizedBy clean
 }
