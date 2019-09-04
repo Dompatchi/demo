@@ -4,7 +4,7 @@ install: true
 
 addons:
   sonarcloud:
-    organisation: "dompatchi"
+    organization: "dompatchi"
     token:
       secure: "36cd422501eb6750baadf583808cce56bf517c56"
 
