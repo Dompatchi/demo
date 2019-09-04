@@ -1,6 +1,7 @@
 language: java
 jdk:
   - openjdk11
+  - openjdk-ea
 
 sudo: required
 
@@ -9,3 +10,7 @@ before_install:
 
 script:
   - ./gradlew clean build -i --continue
+
+  matrix:
+  allow_failures:
+    - jdk: openjdk-ea
