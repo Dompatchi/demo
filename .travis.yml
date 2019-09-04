@@ -6,7 +6,7 @@ addons:
   sonarcloud:
     organisation: "dompatchi"
     token:
-      secure: "f1bb3d6d3075b91ec4f6294960f80c06c5508b57"
+      secure: "36cd422501eb6750baadf583808cce56bf517c56"
 
 jdk:
   - openjdk11
