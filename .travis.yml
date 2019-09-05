@@ -13,3 +13,6 @@ jdk:
 
 script:
   - ./gradlew sonarqube
+
+notifications:
+  slack: 'Jens Scheidmann:3Ojv3kbMr7yTNRZaxnwds5db#backend'
