@@ -8,11 +8,13 @@ addons:
     token:
       secure: "36cd422501eb6750baadf583808cce56bf517c56"
 
+notifications:
+  slack: 
+    rooms:
+    - noseryoungpro-fpp6320:3Ojv3kbMr7yTNRZaxnwds5db#backend
+
 jdk:
   - openjdk11
 
 script:
   - ./gradlew sonarqube
-
-notifications:
-  slack: noseryoungpro-fpp6320:3Ojv3kbMr7yTNRZaxnwds5db
