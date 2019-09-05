@@ -15,4 +15,6 @@ script:
   - ./gradlew sonarqube
 
 notifications:
-  slack: 'Jens Scheidmann:3Ojv3kbMr7yTNRZaxnwds5db#backend'
+  slack: noseryoungpro-fpp6320:3Ojv3kbMr7yTNRZaxnwds5db#backend
+  on_success: change # default: always
+  on_failure: always # default: always
