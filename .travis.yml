@@ -16,5 +16,3 @@ script:
 
 notifications:
   slack: noseryoungpro-fpp6320:3Ojv3kbMr7yTNRZaxnwds5db
-  on_success: change
-  on_failure: always
