@@ -13,8 +13,8 @@ notifications:
     rooms:
     - noseryoungpro-fpp6320:3Ojv3kbMr7yTNRZaxnwds5db#backend
     template:
-      - "Code ```%{repository_slug}``` (%{commit}) : %{message}"
-      - "Build details: %{build_url}|#%{build_number} on Code```%{branch}``` by %{author} %{result} in %{duration}"
+      - "%{repository_slug} (%{commit}) : %{message}"
+      - "Build details: <%{build_url}|#%{build_number}> on Code```%{branch}``` by %{author} %{result} in %{duration}"
 
 jdk:
   - openjdk11
